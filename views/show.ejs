@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+		<title></title>
+<!-- Using CSS to hide the answers below until onClick -->
+		<style type="text/css">
+		.hide {
+		display: none;
+		}
+		</style>
+
+</head>
+<body>
+
+	<!-- EJS -->
+	<!-- <li> <a href="/show-questions">Show Questions</a> </li> -->
+
+<ul>
+	<% for (var i = 0; i<dsfdsfsdfsdfd.length; i++) { %>
+		<li>
+			<span class="que"> <%= dsfdsfsdfsdfd[i].question %> </span>
+			<span class="hide"> <%= dsfdsfsdfsdfd[i].answer %> </span>
+		</li>
+	<% } %>
+</ul>
+
+
+
+<!-- Adding script tags for jQuery use -->
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"> </script>
+
+<!-- Javascript code for the onClick function -->
+<script type="text/javascript">
+
+$('.que').on('click', function() {
+	$(this).siblings().eq(0).removeClass('hide');
+});
+
+</script>
+
+</body>
+</html>
